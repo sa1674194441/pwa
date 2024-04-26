@@ -69,47 +69,47 @@ function calculateValue(buyPrice, sellPrice, contracts) {
     };
 }
 
-// if ('serviceWorker' in navigator) {
-//     navigator.serviceWorker.register('/sw.js').then(reg => {
-//         reg.addEventListener('updatefound', () => {
-//             // 更新发现逻辑
-//             const newWorker = reg.installing;
-//             newWorker.addEventListener('statechange', () => {
+if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('/sw.js').then(reg => {
+        reg.addEventListener('updatefound', () => {
+            // 更新发现逻辑
+            const newWorker = reg.installing;
+            newWorker.addEventListener('statechange', () => {
 
-//                 console.log(newWorker.state , '111')
-//                 if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
-//                     // 显示更新提示
-//                     showUpdateNotification();
-//                 }
-//             });
-//         });
-//     }).catch(error => {
-//         console.error('Service Worker 注册失败:', error);
-//     });
-// }
-// function showUpdateNotification() {
-//     const notification = document.getElementById('updateNotification');
-//     notification.classList.remove('hidden');
-// }
+                console.log(newWorker.state , '111')
+                if (newWorker.state === 'installed' && navigator.serviceWorker.controller) {
+                    // 显示更新提示
+                    showUpdateNotification();
+                }
+            });
+        });
+    }).catch(error => {
+        console.error('Service Worker 注册失败:', error);
+    });
+}
+function showUpdateNotification() {
+    const notification = document.getElementById('updateNotification');
+    notification.classList.remove('hidden');
+}
 
-// function updateApp() {
-//     if ('serviceWorker' in navigator) {
-//         navigator.serviceWorker.getRegistrations().then(function(registrations) {
-//             // 遍历所有Service Worker注册
-//             registrations.forEach(function(registration) {
-//                 // 检查是否有等待中的Service Worker
-//                 if (registration.waiting) {
-//                     // 通知等待中的Service Worker激活
-//                     registration.waiting.postMessage({type: 'SKIP_WAITING'});
-//                 }
-//             });
-//         }).then(function() {
-//             console.log('Service Worker updated.');
-//             // 强制页面刷新
-//             window.location.reload(true);
-//         }).catch(function(error) {
-//             console.error('Failed to update Service Worker:', error);
-//         });
-//     }
-// }
+function updateApp() {
+    if ('serviceWorker' in navigator) {
+        navigator.serviceWorker.getRegistrations().then(function(registrations) {
+            // 遍历所有Service Worker注册
+            registrations.forEach(function(registration) {
+                // 检查是否有等待中的Service Worker
+                if (registration.waiting) {
+                    // 通知等待中的Service Worker激活
+                    registration.waiting.postMessage({type: 'SKIP_WAITING'});
+                }
+            });
+        }).then(function() {
+            console.log('Service Worker updated.');
+            // 强制页面刷新
+            window.location.reload(true);
+        }).catch(function(error) {
+            console.error('Failed to update Service Worker:', error);
+        });
+    }
+}
 
