@@ -70,7 +70,7 @@ function calculateValue(buyPrice, sellPrice, contracts) {
 }
 
 if ('serviceWorker' in navigator) {
-    navigator.serviceWorker.register('/sw.js').then(reg => {
+    navigator.serviceWorker.register('sw.js').then(reg => {
         reg.addEventListener('updatefound', () => {
             // 更新发现逻辑
             const newWorker = reg.installing;
