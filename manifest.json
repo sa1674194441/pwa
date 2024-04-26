@@ -1,7 +1,7 @@
 {
   "name": "期权价格估算工具",
   "short_name": "期权估算",
-  "start_url": "/",
+  "start_url": "/pwa/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#1976D2",

@@ -1,9 +1,9 @@
 const CACHE_NAME = 'v2';
 const urlsToCache = [
-    '/',
-    '/index.html',
-    '/styles.css',
-    '/main.js'
+    '/pwa/',
+    '/pwa/index.html',
+    '/pwa/styles.css',
+    '/pwa/main.js'
 ]
 
 self.addEventListener('install', event => {
