@@ -5,6 +5,9 @@ body, html {
     font-family: 'Arial', sans-serif;
     background-color: #f4f4f9;
     color: #333;
+    position: fixed;  /* Fixed viewport */
+    width: 100%;
+    overflow: hidden; /* Prevent scrolling */
 }
 
 /* 通用容器样式 */
