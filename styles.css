@@ -1,0 +1,137 @@
+/* 基本重置 */
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* 通用容器样式 */
+div {
+    padding: 10px;
+    max-width: 600px;
+    margin: 10px auto;
+    background: white;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 8px;
+}
+
+/* 标签和输入框样式 */
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 16px;
+    color: #555;
+}
+
+input[type="number"], input[type="range"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* 包括padding和border在内的宽度计算 */
+}
+
+/* 按钮样式 */
+button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* 数字显示样式 */
+p {
+    font-size: 16px;
+    color: #444;
+}
+
+span {
+    font-weight: bold;
+}
+/* 自定义滑动条样式 */
+input[type="range"] {
+    -webkit-appearance: none; /* 关闭默认的样式 */
+    width: 100%; /* 全宽 */
+    height: 20px; /* 增加滑动条的高度 */
+    background: #ddd; /* 设置滑动条的背景颜色 */
+    cursor: pointer; /* 滑动时的指针形状 */
+    margin: 10px 0; /* 上下间距 */
+}
+
+/* 滑动条内滑块的样式 */
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 30px; /* 滑块的宽度 */
+    height: 30px; /* 滑块的高度，增加以便于操作 */
+    background: #4CAF50; /* 滑块的背景颜色 */
+    cursor: pointer; /* 可以帮助提高触摸的准确性 */
+    border-radius: 50%; /* 圆形滑块 */
+    border: none; /* 去除边框 */
+}
+
+/* 针对Firefox的样式 */
+input[type="range"]::-moz-range-thumb {
+    width: 30px; /* 滑块的宽度 */
+    height: 30px; /* 滑块的高度，增加以便于操作 */
+    background: #4CAF50; /* 滑块的背景颜色 */
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+/* 针对IE的样式 */
+input[type="range"]::-ms-thumb {
+    width: 30px;
+    height: 30px;
+    background: #4CAF50;
+    cursor: pointer;
+    border-radius: 50%;
+}
+/* 更新通知样式 */
+.update-notification {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffffff;
+    color: #333;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.update-message {
+    margin-bottom: 10px;
+}
+
+.update-btn {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.hidden {
+    display: none;
+}
